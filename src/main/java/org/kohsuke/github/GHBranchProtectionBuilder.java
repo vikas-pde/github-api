@@ -63,6 +63,7 @@ public class GHBranchProtectionBuilder {
 
     public GHBranchProtectionBuilder includeAdmins(boolean v) {
         enforceAdmins = v;
+        getPrReviews().put("include_admins", v);
         return this;
     }
 
