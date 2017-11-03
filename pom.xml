@@ -13,8 +13,8 @@
   <description>GitHub API for Java</description>
 
   <scm>
-    <connection>scm:git:git@github.com/kohsuke/${project.artifactId}.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/kohsuke/${project.artifactId}.git</developerConnection>
+    <connection>scm:git:git@github.com/vikas-pde/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/vikas-pde/${project.artifactId}.git</developerConnection>
     <url>http://${project.artifactId}.kohsuke.org/</url>
     <tag>HEAD</tag>
   </scm>
@@ -22,7 +22,7 @@
   <distributionManagement>
     <site>
       <id>github-pages</id>
-      <url>gitsite:git@github.com/kohsuke/${project.artifactId}.git</url>
+      <url>gitsite:git@github.com/vikas-pde/${project.artifactId}.git</url>
     </site>
   </distributionManagement>
 
@@ -37,8 +37,32 @@
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
-          <rerunFailingTestsCount>2</rerunFailingTestsCount>
+          <skipTests>true</skipTests>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -208,7 +232,7 @@
   <mailingLists>
     <mailingList>
       <name>User List</name>
-      <post>github-api@googlegroups.com</post>
+      <post>vikas.poddar@aa.com</post>
       <archive>https://groups.google.com/forum/#!forum/github-api</archive>
     </mailingList>
   </mailingLists>
