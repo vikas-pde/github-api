@@ -121,6 +121,19 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.6.7</version>
+        <extensions>true</extensions>
+        <configuration>
+          <serverId>nexus</serverId>
+          <!--<nexusUrl>http://ci-admin-apps.horizon.qcorpaa.aa.com/</nexusUrl>-->
+          <nexusUrl>${nexusUrl}</nexusUrl>
+          <skipLocalStaging>true</skipLocalStaging>
+          <skipStaging>true</skipStaging>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 
