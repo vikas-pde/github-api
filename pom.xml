@@ -128,8 +128,7 @@
         <extensions>true</extensions>
         <configuration>
           <serverId>nexus</serverId>
-          <!--<nexusUrl>http://ci-admin-apps.horizon.qcorpaa.aa.com/</nexusUrl>-->
-          <nexusUrl>${nexusUrl}</nexusUrl>
+          <nexusUrl>${nexus.repo}</nexusUrl>
           <skipLocalStaging>true</skipLocalStaging>
           <skipStaging>true</skipStaging>
         </configuration>
