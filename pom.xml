@@ -20,10 +20,16 @@
   </scm>
 
   <distributionManagement>
-    <site>
-      <id>github-pages</id>
-      <url>gitsite:git@github.com/vikas-pde/${project.artifactId}.git</url>
-    </site>
+    <repository>
+      <id>nexus-releases</id>
+      <name>releases</name>
+      <url>${nexus.releases}</url>
+    </repository>
+    <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <name>snapshots</name>
+      <url>${nexus.snapshots}</url>
+    </snapshotRepository>
   </distributionManagement>
 
   <properties>
